@@ -4,7 +4,8 @@ import argparse
 import requests
 
 from angular_flask.core import db
-from angular_flask.models import Post
+from angular_flask.models import *
+from peewee import *
 
 def create_sample_db_entry(api_endpoint, payload):
 	url = 'http://localhost:5000/' + api_endpoint
@@ -12,10 +13,10 @@ def create_sample_db_entry(api_endpoint, payload):
 	print r.text
 	
 def create_db():
-	db.create_all()
+	Post.create_table(fail_silently = True)
 
 def drop_db():
-	db.drop_all()
+	Post.delete_table(fail_silently = True)
 
 def main():
 	parser = argparse.ArgumentParser(description='Manage this Flask application.')
