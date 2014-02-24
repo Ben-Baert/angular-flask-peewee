@@ -36,26 +36,6 @@ def seed_db():
 @manager.shell
 def make_shell_context():
     return dict(app=app, db=db, models=models)
-	
-"""
-	elif args.command == 'seed_db' and args.seedfile:
-		with open(args.seedfile, 'r') as f:
-			seed_data = json.loads(f.read())
-		
-		for item_class in seed_data:
-			items = seed_data[item_class]
-			print items
-			for item in items:
-				print item
-				create_sample_db_entry('api/' + item_class, item)
-
-		print '\nSample data added to database!'
-	else:
-		raise Exception('Invalid command')
-
-if __name__ == '__main__':
-	main()
-"""
 
 if __name__ == "__main__":
     manager.run()
