@@ -14,7 +14,7 @@ for model_name in app.config['API_MODELS']:
 	model_class = app.config['API_MODELS'][model_name]
 	api_manager.register(model_class)
 
-session = api_manager.session
+#session = api_manager.session
 
 # routing for basic pages (pass routing onto the Angular app)
 @app.route('/')
