@@ -1,6 +1,6 @@
 # AngularJS + Flask Boilerplate App
 
-Changed this so that this works with Peewee instead of SQLAlchemy
+Changed this so that this works with Peewee instead of SQLAlchemy. DOES NOT WORK YET!
 
 A template for building apps with an Angular frontend and a Flask / python backend.
 
