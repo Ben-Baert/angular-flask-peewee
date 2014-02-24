@@ -12,8 +12,10 @@ from angular_flask.models import *
 
 for model_name in app.config['API_MODELS']:
 	model_class = app.config['API_MODELS'][model_name]
-	api_manager.register(model_class)
+	api_manager.register(model_class, allowed_methods = ['GET', 'POST', 'PUT', 'DELETE'])
 
+
+api_manager.setup()
 #session = api_manager.session
 
 # routing for basic pages (pass routing onto the Angular app)
