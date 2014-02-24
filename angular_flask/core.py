@@ -1,9 +1,9 @@
 from angular_flask import app
 
 from flask_peewee.db import Database
-from flask.ext.restless import APIManager
+from flask_peewee.rest import RestAPI
 
 db = Database(app)
 
-api_manager = APIManager(app, flask_sqlalchemy_db=db)
+api_manager = RestAPI(app)
 
